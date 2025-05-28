@@ -11,7 +11,7 @@
     "npm": ">= 10"
   },
   "scripts": {
-    "build": "grunt",
+    "build": "node esbuild.mjs",
     "test": "node test/test.dom.js | tap-spec"
   },
   "repository": {
@@ -19,9 +19,7 @@
     "url": "git://github.com/tristen/tablesort.git"
   },
   "devDependencies": {
-    "grunt": "^1.6.1",
-    "grunt-cli": "^1.5.0",
-    "grunt-contrib-uglify": "^5.2.1",
+    "esbuild": "^0.27.2",
     "jsdom": "^26.1.0",
     "tap-spec": "^5.0.0"
   }

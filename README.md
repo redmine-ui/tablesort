@@ -30,6 +30,20 @@ A small & simple sorting component for tables written in JavaScript
 |:---:|:---:|:---:|:---:|:---:|
 | 8+ ✔ | 3.6+ ✔ | 10+ ✔ | 11.50+ ✔ | 5.1+ ✔ |
 
+### ES module
+
+es module is distributed with the extension `.mjs`.Plugins must be registered individually and manually.
+
+``` js
+import Tablesort from 'tablesort.min.mjs';
+import numberPlugin from 'tablesort.number.min.mjs';
+
+Tablesort.extend(numberPlugin.name, numberPlugin.pattern, numberPlugin.sort);
+
+const table = document.querySelector('table');
+new Tablesort(table);
+```
+
 ### Node/Browserify
 
 ``` js
@@ -67,7 +81,7 @@ are gladly accepted!
 
 ### Contributing
 
-Tablesort relies on [Grunt](http://gruntjs.com) as its build tool. Simply run
+Tablesort relies on [esbuild](https://esbuild.github.io/) as its build tool. Simply run
 `npm run build` to package code from any contributions you make to `src/tablesort.js`
 before submitting pull requests.
 
